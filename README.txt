@@ -8,3 +8,6 @@ The other files are service functions used by GPRNN (kernels, Sobol sequence).
 
 - Data: h2o.dat for H2O interatomic potential and ECM_QM9.csv for ZPE (see code lines where they are read for explanations of the content)
 
+The method and examples are described in https://arxiv.org/abs/2509.08457 
+
+
