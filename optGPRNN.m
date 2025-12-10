@@ -59,7 +59,7 @@ end;
 % rerun the best one for plotting 
 a = NNviaHDMRGPR_prod(perturb_best, material, rrmax, ifprod, lp, np); 
 plot([1:MaxCycles+1], rmse_train_best_history,'b',[1:MaxCycles+1], rmse_test_best_history,'r')
-title('trainig (blue) and test (red) set errors')
+title('training (blue) and test (red) set errors')
 xlabel('cycle') 
 ylabel('rmse')
 rmse_train_best
