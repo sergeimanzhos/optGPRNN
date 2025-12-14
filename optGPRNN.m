@@ -20,6 +20,11 @@ switch material
         lp = 0.5
         np = 1e-5
         factor = 1000   % factor applied to saved rmse for ease of viewing
+    case "perovskite"
+        D = 24
+        rrmax = 30
+        lp = 1.0
+        np = 1e-7
 end
 
 % grand cycle
