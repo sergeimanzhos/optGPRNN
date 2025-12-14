@@ -30,6 +30,13 @@ switch material
         data = readtable('ECM_QM9.csv');
         x = table2array(data(2:end,3:18)); % this selects 16 ECM features
         V = table2array(data(2:end,20));   % ZPE is in column 20, in Hartree
+    case "perovskite"
+        length_parameter = log(1.5)          % perovskites: about 1.0 is good. NB: this matters for the RBF kernel not for the product kernel mimicking transistor transfer functions
+        SigmaF0 = 1e-7                     % this is to be understood as sigma^2 in GPR equations. Such low values are best for noise-free runs. With the noise it needs to be increased
+        x = dlmread('perovskite_ML_data.dat'); x=x(:,1:end-1); % last col was heat of formation not used here so we remove it
+        V = x(:,end);
+        x = x(:,1:end-1);
+        x = x(:, [1:3,5:7,9:11,13:15,17:19,21:23,25:27,29:31]); % see MRS Advances (2024)doi.org/10.1557/s43580-023-00749-1 about variable selection
 end;
 % override hyperparameters by passed values if they are non-zero
 if lp>0,
