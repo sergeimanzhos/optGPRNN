@@ -87,6 +87,11 @@ switch material
         Nfit = 3000
         Ntest = 10000
         rng(2,"twister")
+    case "perovskite"
+        Nfit = 432                     % number of training points
+        Ntest = 108
+        rng(2,"twister")               % due to small no. of data, we fix the random seed in this test to focus on the effect of NAF
+        Ntest = min(Ntest,Npts-Nfit)   % or use all remaining points is less than Ntest remain
 end
 
 d = 1                                  % order of HDMR - it is always 1 in this method
