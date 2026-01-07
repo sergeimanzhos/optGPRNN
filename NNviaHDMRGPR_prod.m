@@ -135,7 +135,7 @@ else
 end;
 y = Kall*c;
 message = 'predicted train and test sets'
-    %try to predict as some of component functions
+    %try to predict as sum of component functions
     y = 0;
     for i=1:Nsets,
         if ifprod,
