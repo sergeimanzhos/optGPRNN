@@ -1,8 +1,8 @@
 % The code for the GPR-NN method was provided in J. Phys. Chem. A, 127, 7823–7835 (2023)
 % This version is used for weights optimization with MC
 % The optimization cycle is external
-% This code was not produced as an end-user aimed distribution. No effort
-% was made to optimize CPU or RAM performance. 
+% This code was not produced as an end-user aimed distribution but to demonstrate the method. 
+% No effort was made to optimize CPU or RAM performance. 
 % Contact Sergei.Manzhos@gmail.com with questions about the code or the method
 function a = NNviaHDMRGPR_prod(perturb, material, rrmax, ifprod, lp, np)
 global f  % globalize the figure to be able to suppress multiple figures from the main cycle 
